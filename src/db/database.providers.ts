@@ -30,6 +30,18 @@ export const databaseProviders = [
       return sequelize;
     },
   },
+  {
+    provide: 'eventRepository',
+    useValue: Event,
+  },
+  {
+    provide: 'extrinsicRepository',
+    useValue: Extrinsic,
+  },
+  {
+    provide: 'specVersionRepository',
+    useValue: SpecVersion,
+  },
 ];
 
 function parseConnectionString(connectionString: string): any {
