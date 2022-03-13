@@ -1,6 +1,6 @@
-import { Column, DataType, Model, PrimaryKey, Table } from 'sequelize-typescript'
+import { Column, Model, PrimaryKey, Table } from 'sequelize-typescript'
 
-@Table({ tableName: 'extrinsics' })
+@Table({ tableName: 'extrinsics', timestamps: false })
 export class Extrinsic extends Model {
 
   @PrimaryKey
@@ -16,7 +16,7 @@ export class Extrinsic extends Model {
   @Column
   module!: string
 
-  @Column(DataType.TEXT)
+  @Column
   call!: string
 
   @Column

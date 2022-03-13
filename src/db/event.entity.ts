@@ -1,6 +1,6 @@
-import { Column, DataType, Model, PrimaryKey, Table } from 'sequelize-typescript'
+import { Column, Model, PrimaryKey, Table } from 'sequelize-typescript'
 
-@Table({ tableName: 'events' })
+@Table({ tableName: 'events', timestamps: false })
 export class Event extends Model {
 
   @PrimaryKey
@@ -13,6 +13,6 @@ export class Event extends Model {
   @Column
   module!: string
 
-  @Column(DataType.TEXT)
+  @Column
   event!: string
 }
