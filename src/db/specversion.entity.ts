@@ -1,6 +1,6 @@
 import { Column, Model, PrimaryKey, Table } from 'sequelize-typescript'
 
-@Table({ tableName: 'spec_versions' })
+@Table
 export class SpecVersion extends Model {
 
   @PrimaryKey
